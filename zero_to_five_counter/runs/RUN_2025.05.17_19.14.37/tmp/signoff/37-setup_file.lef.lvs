@@ -1,0 +1,1 @@
+lvs {/openlane/designs/zero_to_five_counter/runs/RUN_2025.05.17_19.14.37/results/signoff/top.spice top} {/openlane/designs/zero_to_five_counter/runs/RUN_2025.05.17_19.14.37/tmp/signoff/34-top.pnl.v top} /root/.volare/sky130A/libs.tech/netgen/sky130A_setup.tcl /openlane/designs/zero_to_five_counter/runs/RUN_2025.05.17_19.14.37/logs/signoff/37-top.lef.lvs.log -json

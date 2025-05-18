@@ -1,0 +1,16 @@
+digraph "top" {
+label="top";
+rankdir="LR";
+remincross=true;
+n1 [ shape=octagon, label="out", color="black", fontcolor="black" ];
+n2 [ shape=diamond, label="count", color="black", fontcolor="black" ];
+n3 [ shape=octagon, label="rst", color="black", fontcolor="black" ];
+n4 [ shape=octagon, label="clk", color="black", fontcolor="black" ];
+c6 [ shape=record, label="{{<p5> in}|display_out\nDisplayOut|{<p1> out}}",  ];
+c7 [ shape=record, label="{{<p4> clk|<p3> rst}|uut\nZeroToFiveCounter|{<p2> count}}",  ];
+c6:p1:e -> n1:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+c7:p2:e -> n2:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n2:e -> c6:p5:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n3:e -> c7:p3:w [color="black", fontcolor="black", label=""];
+n4:e -> c7:p4:w [color="black", fontcolor="black", label=""];
+}
