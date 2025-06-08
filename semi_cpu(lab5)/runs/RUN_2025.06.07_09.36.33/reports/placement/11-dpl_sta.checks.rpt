@@ -1,0 +1,302 @@
+
+===========================================================================
+report_checks -unconstrained
+===========================================================================
+======================= Typical Corner ===================================
+
+Startpoint: _3574_ (rising edge-triggered flip-flop clocked by core_clock)
+Endpoint: _3593_ (rising edge-triggered flip-flop clocked by core_clock)
+Path Group: core_clock
+Path Type: max
+
+Fanout     Cap    Slew   Delay    Time   Description
+-----------------------------------------------------------------------------
+                  0.00    0.00    0.00   clock core_clock (rise edge)
+                          0.00    0.00   clock network delay (ideal)
+                  0.00    0.00    0.00 ^ _3574_/CLK (sky130_fd_sc_hd__dfxtp_1)
+     5    0.01    0.11    0.34    0.34 ^ _3574_/Q (sky130_fd_sc_hd__dfxtp_1)
+                                         clk_div.counter[0] (net)
+                  0.11    0.00    0.34 ^ _3058_/A (sky130_fd_sc_hd__and3_1)
+     4    0.01    0.16    0.24    0.58 ^ _3058_/X (sky130_fd_sc_hd__and3_1)
+                                         _1501_ (net)
+                  0.16    0.00    0.58 ^ _3064_/C (sky130_fd_sc_hd__and3_1)
+     4    0.01    0.13    0.24    0.82 ^ _3064_/X (sky130_fd_sc_hd__and3_1)
+                                         _1505_ (net)
+                  0.13    0.00    0.82 ^ _3069_/B (sky130_fd_sc_hd__and2_1)
+     4    0.01    0.11    0.19    1.01 ^ _3069_/X (sky130_fd_sc_hd__and2_1)
+                                         _1509_ (net)
+                  0.11    0.00    1.01 ^ _3075_/C (sky130_fd_sc_hd__and3_1)
+     4    0.01    0.16    0.25    1.26 ^ _3075_/X (sky130_fd_sc_hd__and3_1)
+                                         _1513_ (net)
+                  0.16    0.00    1.26 ^ _3080_/C (sky130_fd_sc_hd__and3_1)
+     4    0.01    0.14    0.25    1.50 ^ _3080_/X (sky130_fd_sc_hd__and3_1)
+                                         _1516_ (net)
+                  0.14    0.00    1.50 ^ _3084_/C (sky130_fd_sc_hd__and3_1)
+     3    0.01    0.09    0.20    1.71 ^ _3084_/X (sky130_fd_sc_hd__and3_1)
+                                         _1518_ (net)
+                  0.09    0.00    1.71 ^ _3088_/B (sky130_fd_sc_hd__and2_1)
+     4    0.01    0.12    0.19    1.89 ^ _3088_/X (sky130_fd_sc_hd__and2_1)
+                                         _1521_ (net)
+                  0.12    0.00    1.89 ^ _3097_/C (sky130_fd_sc_hd__and3_1)
+     3    0.01    0.11    0.21    2.10 ^ _3097_/X (sky130_fd_sc_hd__and3_1)
+                                         _1527_ (net)
+                  0.11    0.00    2.10 ^ _3100_/C (sky130_fd_sc_hd__and3_1)
+     4    0.01    0.13    0.23    2.33 ^ _3100_/X (sky130_fd_sc_hd__and3_1)
+                                         _1529_ (net)
+                  0.13    0.00    2.33 ^ _3104_/C (sky130_fd_sc_hd__and3_1)
+     2    0.01    0.09    0.21    2.54 ^ _3104_/X (sky130_fd_sc_hd__and3_1)
+                                         _1531_ (net)
+                  0.09    0.00    2.54 ^ _3106_/B (sky130_fd_sc_hd__xor2_1)
+     1    0.00    0.11    0.14    2.68 ^ _3106_/X (sky130_fd_sc_hd__xor2_1)
+                                         _0040_ (net)
+                  0.11    0.00    2.68 ^ _3593_/D (sky130_fd_sc_hd__dfxtp_1)
+                                  2.68   data arrival time
+
+                  0.00   10.00   10.00   clock core_clock (rise edge)
+                          0.00   10.00   clock network delay (ideal)
+                          0.00   10.00   clock reconvergence pessimism
+                                 10.00 ^ _3593_/CLK (sky130_fd_sc_hd__dfxtp_1)
+                         -0.07    9.93   library setup time
+                                  9.93   data required time
+-----------------------------------------------------------------------------
+                                  9.93   data required time
+                                 -2.68   data arrival time
+-----------------------------------------------------------------------------
+                                  7.24   slack (MET)
+
+
+
+
+===========================================================================
+report_checks --slack_max -0.01
+============================================================================
+======================= Typical Corner ===================================
+
+No paths found.
+
+
+===========================================================================
+ report_check_types -max_slew -max_cap -max_fanout -violators
+============================================================================
+======================= Typical Corner ===================================
+
+
+max slew violations count Typical: 0
+max fanout violations count Typical: 0
+max cap violations count Typical: 0
+
+===========================================================================
+report_parasitic_annotation -report_unannotated
+============================================================================
+Found 2 unannotated drivers.
+ clk
+ Main_18/LO
+Found 0 partially unannotated drivers.
+
+===========================================================================
+max slew violation count 0
+max fanout violation count 0
+max cap violation count 0
+============================================================================
+
+===========================================================================
+check_setup -verbose -unconstrained_endpoints -multiple_clock -no_clock -no_input_delay -loops -generated_clocks
+===========================================================================
+Warning: There are 2 input ports missing set_input_delay.
+  next
+  rst
+Warning: There are 87 unclocked register/latch pins.
+  _3522_/CLK
+  _3523_/CLK
+  _3524_/CLK
+  _3526_/GATE_N
+  _3527_/GATE_N
+  _3528_/GATE_N
+  _3529_/GATE_N
+  _3530_/GATE_N
+  _3531_/GATE_N
+  _3532_/GATE_N
+  _3533_/GATE_N
+  _3534_/GATE_N
+  _3535_/GATE_N
+  _3536_/GATE_N
+  _3537_/GATE_N
+  _3538_/GATE_N
+  _3539_/GATE_N
+  _3540_/GATE_N
+  _3541_/GATE_N
+  _3542_/GATE_N
+  _3543_/GATE_N
+  _3544_/GATE_N
+  _3545_/GATE_N
+  _3546_/GATE_N
+  _3547_/GATE_N
+  _3548_/GATE_N
+  _3549_/GATE_N
+  _3550_/GATE_N
+  _3551_/GATE_N
+  _3552_/GATE_N
+  _3553_/GATE_N
+  _3554_/GATE_N
+  _3555_/GATE_N
+  _3556_/GATE_N
+  _3557_/GATE_N
+  _3558_/CLK
+  _3559_/CLK
+  _3560_/CLK
+  _3561_/CLK
+  _3562_/CLK
+  _3563_/CLK
+  _3564_/CLK
+  _3566_/CLK
+  _3567_/CLK
+  _3568_/CLK
+  _3569_/CLK
+  _3570_/CLK
+  _3571_/CLK
+  _3572_/CLK
+  _3573_/CLK
+  _3594_/CLK
+  _3595_/CLK
+  _3596_/CLK
+  _3597_/CLK
+  _3598_/CLK
+  _3599_/CLK
+  _3600_/CLK
+  _3601_/CLK
+  _3602_/CLK
+  _3603_/CLK
+  _3604_/CLK
+  _3605_/CLK
+  _3606_/CLK
+  _3607_/CLK
+  _3608_/CLK
+  _3609_/CLK
+  _3610_/CLK
+  _3611_/CLK
+  _3612_/CLK
+  _3613_/CLK
+  _3614_/CLK
+  _3615_/CLK
+  _3616_/CLK
+  _3617_/CLK
+  _3618_/CLK
+  _3619_/CLK
+  _3620_/CLK
+  _3621_/CLK
+  _3622_/CLK
+  _3783_/CLK
+  _3784_/CLK
+  _3785_/CLK
+  _3786_/CLK
+  _3787_/CLK
+  _3788_/CLK
+  _3789_/CLK
+  _3790_/CLK
+Warning: There are 106 unconstrained endpoints.
+  an[0]
+  an[1]
+  an[2]
+  an[3]
+  an[4]
+  an[5]
+  an[6]
+  an[7]
+  cx[0]
+  cx[1]
+  cx[2]
+  cx[3]
+  cx[4]
+  cx[5]
+  cx[6]
+  cx[7]
+  _3522_/D
+  _3523_/D
+  _3524_/D
+  _3526_/D
+  _3527_/D
+  _3528_/D
+  _3529_/D
+  _3530_/D
+  _3531_/D
+  _3532_/D
+  _3533_/D
+  _3534_/D
+  _3535_/D
+  _3536_/D
+  _3537_/D
+  _3538_/D
+  _3539_/D
+  _3540_/D
+  _3541_/D
+  _3542_/D
+  _3543_/D
+  _3544_/D
+  _3545_/D
+  _3546_/D
+  _3547_/D
+  _3548_/D
+  _3549_/D
+  _3550_/D
+  _3551_/D
+  _3552_/D
+  _3553_/D
+  _3554_/D
+  _3555_/D
+  _3556_/D
+  _3557_/D
+  _3558_/D
+  _3559_/D
+  _3560_/D
+  _3561_/D
+  _3562_/D
+  _3563_/D
+  _3564_/D
+  _3566_/D
+  _3567_/D
+  _3568_/D
+  _3569_/D
+  _3570_/D
+  _3571_/D
+  _3572_/D
+  _3573_/D
+  _3594_/D
+  _3595_/D
+  _3596_/D
+  _3597_/D
+  _3598_/D
+  _3599_/D
+  _3600_/D
+  _3601_/D
+  _3602_/D
+  _3603_/D
+  _3604_/D
+  _3605_/D
+  _3606_/D
+  _3607_/D
+  _3608_/D
+  _3609_/D
+  _3610_/D
+  _3611_/D
+  _3612_/D
+  _3613_/D
+  _3614_/D
+  _3615_/D
+  _3616_/D
+  _3617_/D
+  _3618_/D
+  _3619_/D
+  _3620_/D
+  _3621_/D
+  _3622_/D
+  _3783_/D
+  _3784_/D
+  _3785_/D
+  _3786_/D
+  _3787_/D
+  _3788_/D
+  _3789_/D
+  _3790_/D
+  _3791_/D
+  _3792_/D
+  _3793_/D

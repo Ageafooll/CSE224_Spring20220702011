@@ -1,0 +1,234 @@
+Sat Jun 07 09:36:34 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/lefutil.py get_metal_layers -o /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/layers.list /root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef}"
+
+Sat Jun 07 09:36:34 +0000 2025 - Executing "{/openlane/scripts/mergeLef.py -o /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/merged.nom.lef -i /root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__nom.tlef {/root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef} |& tee /dev/null}"
+
+Sat Jun 07 09:36:34 +0000 2025 - Executing "{/openlane/scripts/mergeLef.py -o /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/merged.min.lef -i /root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__min.tlef {/root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef} |& tee /dev/null}"
+
+Sat Jun 07 09:36:35 +0000 2025 - Executing "{/openlane/scripts/mergeLef.py -o /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/merged.max.lef -i /root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/techlef/sky130_fd_sc_hd__max.tlef {/root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_fd_sc_hd.lef /root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lef/sky130_ef_sc_hd.lef} |& tee /dev/null}"
+
+Sat Jun 07 09:36:35 +0000 2025 - Executing "{python3 /openlane/scripts/mergeLib.py --output /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/synthesis/merged.lib --name sky130A_merged /root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib}"
+
+Sat Jun 07 09:36:35 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/synthesis/trimmed.lib.exclude.list --output /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/synthesis/trimmed.lib /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/synthesis/merged.lib}"
+
+Sat Jun 07 09:36:35 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/cts/cts.lib.exclude.list --output /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/cts/cts.lib /root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib}"
+
+Sat Jun 07 09:36:35 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/cts/cts-fastest.lib.exclude.list --output /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/cts/cts-fastest.lib /root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ff_n40C_1v95.lib}"
+
+Sat Jun 07 09:36:36 +0000 2025 - Executing "{python3 /openlane/scripts/libtrim.py --cell-file /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/cts/cts-slowest.lib.exclude.list --output /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/cts/cts-slowest.lib /root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__ss_100C_1v60.lib}"
+
+Sat Jun 07 09:36:37 +0000 2025 - Executing "{python3 /openlane/scripts/new_tracks.py -i /root/.volare/sky130A/libs.tech/openlane/sky130_fd_sc_hd/tracks.info -o /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/routing/config.tracks}"
+
+Sat Jun 07 09:36:37 +0000 2025 - Executing "{echo {OpenLane e73fb3c57e687a0023fcd4dcfd1566ecd478362a} > /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/OPENLANE_COMMIT}"
+
+Sat Jun 07 09:36:37 +0000 2025 - Executing "{sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/lib/sky130_fd_sc_hd__tt_025C_1v80.lib > /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/synthesis/1-sky130_fd_sc_hd__tt_025C_1v80.no_pg.lib}"
+
+Sat Jun 07 09:36:37 +0000 2025 - Executing "{sed -E {s/^([[:space:]]+)pg_pin(.*)/\1pin\2\n\1    direction : "inout";/g} /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/synthesis/trimmed.lib > /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/synthesis/1-trimmed.no_pg.lib}"
+
+Sat Jun 07 09:36:37 +0000 2025 - Executing "yosys -c /openlane/scripts/yosys/synth.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/synthesis/1-synthesis.log"
+
+Sat Jun 07 09:36:37 +0000 2025 - Executing "{yosys -c /openlane/scripts/yosys/synth.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/synthesis/1-synthesis.log}"
+
+Sat Jun 07 09:37:09 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/semi_cpu\/runs\/RUN_2025.06.07_09.36.33\/results\/synthesis\/Main.v/} /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/config.tcl}"
+
+Sat Jun 07 09:37:09 +0000 2025 - Executing "{sed -i.bak /defparam/d /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/results/synthesis/Main.v}"
+
+Sat Jun 07 09:37:10 +0000 2025 - Executing "sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/synthesis/2-sta.log"
+
+Sat Jun 07 09:37:10 +0000 2025 - Executing "{sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/synthesis/2-sta.log}"
+
+Sat Jun 07 09:37:10 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/floorplan.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/floorplan/3-initial_fp.log"
+
+Sat Jun 07 09:37:11 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/floorplan.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/floorplan/3-initial_fp.log}"
+
+Sat Jun 07 09:37:11 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/defutil.py extract_core_dims --output-data /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/dimensions.txt --input-lef /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/merged.nom.lef /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/floorplan/3-initial_fp.def}"
+
+Sat Jun 07 09:37:12 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/io_place.py --config /openlane/designs/semi_cpu/pin_order.cfg --hor-layer met3 --ver-layer met2 --ver-width-mult 2 --hor-width-mult 2 --hor-extension 0 --ver-extension 0 --length 4 --unmatched-error --input-lef /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/merged.nom.lef --output-def /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/floorplan/4-io.def --output /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/floorplan/4-io.odb /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/floorplan/3-initial_fp.odb |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/floorplan/4-place_io.log}"
+
+Sat Jun 07 09:37:13 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/tapcell.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/floorplan/5-tap.log"
+
+Sat Jun 07 09:37:13 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/tapcell.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/floorplan/5-tap.log}"
+
+Sat Jun 07 09:37:14 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/pdn.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/floorplan/6-pdn.log"
+
+Sat Jun 07 09:37:14 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/pdn.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/floorplan/6-pdn.log}"
+
+Sat Jun 07 09:37:15 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/gpl.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/placement/6-global.log"
+
+Sat Jun 07 09:37:15 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/gpl.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/placement/6-global.log}"
+
+Sat Jun 07 09:37:23 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/semi_cpu\/runs\/RUN_2025.06.07_09.36.33\/tmp\/placement\/7-global.nl.v/} /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/config.tcl}"
+
+Sat Jun 07 09:37:24 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/placement/8-gpl_sta.log"
+
+Sat Jun 07 09:37:24 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/placement/8-gpl_sta.log}"
+
+Sat Jun 07 09:37:25 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/placement/9-resizer.log"
+
+Sat Jun 07 09:37:25 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/resizer.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/placement/9-resizer.log}"
+
+Sat Jun 07 09:37:28 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/semi_cpu\/runs\/RUN_2025.06.07_09.36.33\/tmp\/placement\/9-resizer.nl.v/} /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/config.tcl}"
+
+Sat Jun 07 09:37:29 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/dpl.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/placement/10-detailed.log"
+
+Sat Jun 07 09:37:29 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/dpl.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/placement/10-detailed.log}"
+
+Sat Jun 07 09:37:29 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/semi_cpu\/runs\/RUN_2025.06.07_09.36.33\/results\/placement\/Main.nl.v/} /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/config.tcl}"
+
+Sat Jun 07 09:37:29 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/placement/11-dpl_sta.log"
+
+Sat Jun 07 09:37:29 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/placement/11-dpl_sta.log}"
+
+Sat Jun 07 09:37:31 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/cts.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/cts/12-cts.log"
+
+Sat Jun 07 09:37:31 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/cts.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/cts/12-cts.log}"
+
+Sat Jun 07 09:37:40 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/cts/13-cts_sta.log"
+
+Sat Jun 07 09:37:40 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/cts/13-cts_sta.log}"
+
+Sat Jun 07 09:37:42 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer_timing.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/cts/14-resizer.log"
+
+Sat Jun 07 09:37:42 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/resizer_timing.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/cts/14-resizer.log}"
+
+Sat Jun 07 09:37:44 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/semi_cpu\/runs\/RUN_2025.06.07_09.36.33\/tmp\/cts\/14-Main.resized.nl.v/} /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/config.tcl}"
+
+Sat Jun 07 09:37:45 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer_routing_design.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/15-resizer_design.log"
+
+Sat Jun 07 09:37:45 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/resizer_routing_design.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/15-resizer_design.log}"
+
+Sat Jun 07 09:37:48 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/semi_cpu\/runs\/RUN_2025.06.07_09.36.33\/tmp\/15-Main.nl.v/} /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/config.tcl}"
+
+Sat Jun 07 09:37:48 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/16-rsz_design_sta.log"
+
+Sat Jun 07 09:37:48 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/16-rsz_design_sta.log}"
+
+Sat Jun 07 09:37:50 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/resizer_routing_timing.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/17-resizer_timing.log"
+
+Sat Jun 07 09:37:50 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/resizer_routing_timing.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/17-resizer_timing.log}"
+
+Sat Jun 07 09:37:53 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/semi_cpu\/runs\/RUN_2025.06.07_09.36.33\/tmp\/17-Main.nl.v/} /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/config.tcl}"
+
+Sat Jun 07 09:37:53 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/18-rsz_timing_sta.log"
+
+Sat Jun 07 09:37:53 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/18-rsz_timing_sta.log}"
+
+Sat Jun 07 09:37:57 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/repair_antennas.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/19-global.log"
+
+Sat Jun 07 09:37:57 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/repair_antennas.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/19-global.log}"
+
+Sat Jun 07 09:37:58 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/write_views.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/19-global_write_netlist.log"
+
+Sat Jun 07 09:37:58 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/write_views.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/19-global_write_netlist.log}"
+
+Sat Jun 07 09:37:59 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/semi_cpu\/runs\/RUN_2025.06.07_09.36.33\/tmp\/routing\/global.nl.v/} /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/config.tcl}"
+
+Sat Jun 07 09:37:59 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/21-grt_sta.log"
+
+Sat Jun 07 09:37:59 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/21-grt_sta.log}"
+
+Sat Jun 07 09:38:00 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/fill.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/22-fill.log"
+
+Sat Jun 07 09:38:00 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/fill.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/22-fill.log}"
+
+Sat Jun 07 09:38:01 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/semi_cpu\/runs\/RUN_2025.06.07_09.36.33\/tmp\/routing\/22-fill.nl.v/} /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/config.tcl}"
+
+Sat Jun 07 09:38:01 +0000 2025 - Executing "openroad -exit -metrics /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/routing/23-drt_metrics.json /openlane/scripts/openroad/droute.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/23-detailed.log"
+
+Sat Jun 07 09:38:01 +0000 2025 - Executing "{openroad -exit -metrics /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/routing/23-drt_metrics.json /openlane/scripts/openroad/droute.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/23-detailed.log}"
+
+Sat Jun 07 09:39:30 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/semi_cpu\/runs\/RUN_2025.06.07_09.36.33\/results\/routing\/Main.nl.v/} /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/config.tcl}"
+
+Sat Jun 07 09:39:30 +0000 2025 - Executing "{python3 /openlane/scripts/drc_rosetta.py tr to_klayout -o /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/routing/drt.klayout.xml --design-name Main /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/routing/drt.drc}"
+
+Sat Jun 07 09:39:30 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/wire_lengths.py --report-out /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/routing/24-wire_lengths.csv --input-lef /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/merged.nom.lef --output-def /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/results/routing/Main.def --output /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/results/routing/Main.odb /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/results/routing/Main.odb |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/routing/24-wire_lengths.log}"
+
+Sat Jun 07 09:39:31 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/rcx.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/25-parasitics_extraction.min.log"
+
+Sat Jun 07 09:39:31 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/rcx.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/25-parasitics_extraction.min.log}"
+
+Sat Jun 07 09:39:32 +0000 2025 - Executing "sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/26-rcx_mcsta.min.log"
+
+Sat Jun 07 09:39:32 +0000 2025 - Executing "{sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/26-rcx_mcsta.min.log}"
+
+Sat Jun 07 09:39:40 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/rcx.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/27-parasitics_extraction.max.log"
+
+Sat Jun 07 09:39:40 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/rcx.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/27-parasitics_extraction.max.log}"
+
+Sat Jun 07 09:39:41 +0000 2025 - Executing "sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/28-rcx_mcsta.max.log"
+
+Sat Jun 07 09:39:41 +0000 2025 - Executing "{sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/28-rcx_mcsta.max.log}"
+
+Sat Jun 07 09:39:47 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/rcx.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/29-parasitics_extraction.nom.log"
+
+Sat Jun 07 09:39:47 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/rcx.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/29-parasitics_extraction.nom.log}"
+
+Sat Jun 07 09:39:48 +0000 2025 - Executing "sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/30-rcx_mcsta.nom.log"
+
+Sat Jun 07 09:39:48 +0000 2025 - Executing "{sta -exit -no_init /openlane/scripts/openroad/sta/multi_corner.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/30-rcx_mcsta.nom.log}"
+
+Sat Jun 07 09:39:54 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/irdrop.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/31-irdrop.log"
+
+Sat Jun 07 09:39:54 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/irdrop.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/31-irdrop.log}"
+
+Sat Jun 07 09:39:56 +0000 2025 - Executing "magic -noconsole -dnull -rcfile /root/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/32-gdsii.log"
+
+Sat Jun 07 09:39:56 +0000 2025 - Executing "{magic -noconsole -dnull -rcfile /root/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/32-gdsii.log}"
+
+Sat Jun 07 09:39:57 +0000 2025 - Executing "magic -noconsole -dnull -rcfile /root/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/32-gds_ptrs.log"
+
+Sat Jun 07 09:39:57 +0000 2025 - Executing "{magic -noconsole -dnull -rcfile /root/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/32-gds_ptrs.log}"
+
+Sat Jun 07 09:39:58 +0000 2025 - Executing "{sed -i.bak -n {/^<< properties >>/,/^<< end >>/p} /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/signoff/gds_ptrs.mag}"
+
+Sat Jun 07 09:39:58 +0000 2025 - Executing "magic -noconsole -dnull -rcfile /root/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/32-lef.log"
+
+Sat Jun 07 09:39:58 +0000 2025 - Executing "{magic -noconsole -dnull -rcfile /root/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/32-lef.log}"
+
+Sat Jun 07 09:39:59 +0000 2025 - Executing "magic -noconsole -dnull -rcfile /root/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/32-maglef.log"
+
+Sat Jun 07 09:39:59 +0000 2025 - Executing "{magic -noconsole -dnull -rcfile /root/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/32-maglef.log}"
+
+Sat Jun 07 09:40:00 +0000 2025 - Executing "{python3 /openlane/scripts/klayout/stream_out.py --output /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/results/signoff/Main.klayout.gds --lyt /root/.volare/sky130A/libs.tech/klayout/tech/sky130A.lyt --lym /root/.volare/sky130A/libs.tech/klayout/tech/sky130A.map --lyp /root/.volare/sky130A/libs.tech/klayout/tech/sky130A.lyp --top Main --with-gds-file /root/.volare/sky130A/libs.ref/sky130_fd_sc_hd/gds/sky130_fd_sc_hd.gds --input-lef /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/merged.nom.lef /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/results/routing/Main.def |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/33-gdsii-klayout.log}"
+
+Sat Jun 07 09:40:01 +0000 2025 - Executing "{klayout -b -r /openlane/scripts/klayout/xor.drc -rd a=/openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/results/signoff/Main.gds -rd b=/openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/results/signoff/Main.klayout.gds -rd jobs=1 -rd rdb_out=/openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/signoff/34-xor.xml -rd ignore=81/14 -rd rpt_out=/openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/signoff/34-xor.rpt |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/34-xor.log}"
+
+Sat Jun 07 09:40:05 +0000 2025 - Executing "magic -noconsole -dnull -rcfile /root/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/35-spice.log"
+
+Sat Jun 07 09:40:05 +0000 2025 - Executing "{magic -noconsole -dnull -rcfile /root/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/35-spice.log}"
+
+Sat Jun 07 09:40:07 +0000 2025 - Executing "{openroad -exit -no_init -python /openlane/scripts/odbpy/power_utils.py write_powered_def --output /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/signoff/35-Main.p.def --input-lef /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/merged.nom.lef --power-port VPWR --ground-port VGND --powered-netlist {} /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/results/routing/Main.def |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/36-write_powered_def.log}"
+
+Sat Jun 07 09:40:08 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/write_views.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/36-write_powered_verilog.log"
+
+Sat Jun 07 09:40:08 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/write_views.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/36-write_powered_verilog.log}"
+
+Sat Jun 07 09:40:09 +0000 2025 - Executing "{sed -i.bak -e {s/\(set ::env(CURRENT_NETLIST)\).*/\1 \/openlane\/designs\/semi_cpu\/runs\/RUN_2025.06.07_09.36.33\/tmp\/signoff\/35-Main.nl.v/} /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/config.tcl}"
+
+Sat Jun 07 09:40:09 +0000 2025 - Executing "{netgen -batch source /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/tmp/signoff/38-setup_file.lef.lvs |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/38-lvs.lef.log}"
+
+Sat Jun 07 09:40:10 +0000 2025 - Executing "magic -noconsole -dnull -rcfile /root/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/39-drc.log"
+
+Sat Jun 07 09:40:10 +0000 2025 - Executing "{magic -noconsole -dnull -rcfile /root/.volare/sky130A/libs.tech/magic/sky130A.magicrc < /openlane/scripts/magic/wrapper.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/39-drc.log}"
+
+Sat Jun 07 09:40:19 +0000 2025 - Executing "{python3 /openlane/scripts/drc_rosetta.py magic to_tcl -o /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/signoff/drc.tcl /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/signoff/drc.rpt}"
+
+Sat Jun 07 09:40:19 +0000 2025 - Executing "{python3 /openlane/scripts/drc_rosetta.py magic to_tr -o /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/signoff/drc.tr /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/signoff/drc.rpt}"
+
+Sat Jun 07 09:40:19 +0000 2025 - Executing "{python3 /openlane/scripts/drc_rosetta.py tr to_klayout -o /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/signoff/drc.klayout.xml --design-name Main /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/signoff/drc.tr}"
+
+Sat Jun 07 09:40:19 +0000 2025 - Executing "{python3 /openlane/scripts/drc_rosetta.py magic to_rdb -o /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/signoff/drc.rdb /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/signoff/drc.rpt}"
+
+Sat Jun 07 09:40:20 +0000 2025 - Executing "{klayout -b -zz -r /root/.volare/sky130A/libs.tech/klayout/drc/sky130A_mr.drc -rd topcell=Main -rd input=/openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/results/signoff/Main.gds -rd report=/openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/signoff/violations.xml -rd feol=true -rd beol=true -rd floating_metal=false -rd seal=true -rd thread=1 |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/40-drc-klayout.log}"
+
+Sat Jun 07 09:40:32 +0000 2025 - Executing "{python3 /openlane/scripts/klayout/xml_drc_report_to_json.py --xml-file /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/signoff/violations.xml --json-file /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/signoff/violations.json}"
+
+Sat Jun 07 09:40:32 +0000 2025 - Executing "openroad -exit /openlane/scripts/openroad/antenna_check.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/41-arc.log"
+
+Sat Jun 07 09:40:32 +0000 2025 - Executing "{openroad -exit /openlane/scripts/openroad/antenna_check.tcl |& tee /dev/null /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/41-arc.log}"
+
+Sat Jun 07 09:40:33 +0000 2025 - Executing "{python3 /openlane/scripts/extract_antenna_violators.py --output /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/signoff/41-antenna_violators.rpt --plain-out /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/signoff/41-antenna_violators_pins.txt /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/logs/signoff/41-arc.log}"
+
+Sat Jun 07 09:40:34 +0000 2025 - Executing "{python3 /openlane/scripts/write_runtime.py --conclude --seconds --time-in 1749289234 {flow completed}}"
+
+Sat Jun 07 09:40:34 +0000 2025 - Executing "{python3 /openlane/scripts/generate_reports.py -d /openlane/designs/semi_cpu --design_name Main --tag RUN_2025.06.07_09.36.33 --output_file /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/metrics.csv --man_report /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33/reports/manufacturability.rpt --run_path /openlane/designs/semi_cpu/runs/RUN_2025.06.07_09.36.33}"
+

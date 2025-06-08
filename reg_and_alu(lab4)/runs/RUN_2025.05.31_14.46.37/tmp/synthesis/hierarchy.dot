@@ -1,0 +1,37 @@
+digraph "topmodule" {
+label="topmodule";
+rankdir="LR";
+remincross=true;
+n2 [ shape=diamond, label="alu_out", color="black", fontcolor="black" ];
+n3 [ shape=octagon, label="RD2", color="black", fontcolor="black" ];
+n4 [ shape=octagon, label="RD1", color="black", fontcolor="black" ];
+n5 [ shape=octagon, label="outputC", color="black", fontcolor="black" ];
+n6 [ shape=octagon, label="WD3", color="black", fontcolor="black" ];
+n7 [ shape=octagon, label="A3", color="black", fontcolor="black" ];
+n8 [ shape=octagon, label="A2", color="black", fontcolor="black" ];
+n9 [ shape=octagon, label="A1", color="black", fontcolor="black" ];
+n10 [ shape=octagon, label="WE3", color="black", fontcolor="black" ];
+n11 [ shape=octagon, label="clk", color="black", fontcolor="black" ];
+n12 [ shape=octagon, label="opcode", color="black", fontcolor="black" ];
+n13 [ shape=octagon, label="inputB", color="black", fontcolor="black" ];
+n14 [ shape=octagon, label="inputA", color="black", fontcolor="black" ];
+c15 [ shape=record, label="{{<p9> A1|<p8> A2|<p7> A3|<p6> WD3|<p10> WE3|<p11> clk}|Module2\nRegisterFile|{<p4> RD1|<p3> RD2}}",  ];
+c16 [ shape=record, label="{{<p11> clk|<p14> inputA|<p13> inputB|<p12> opcode}|Module1\nALU|{<p5> outputC}}",  ];
+p0 [shape=box, style=rounded, label="PROC $1\n/openlane/designs/lab4/src/topmodule.v:22.1-24.4", ];
+n10:e -> c15:p10:w [color="black", fontcolor="black", label=""];
+n11:e -> c15:p11:w [color="black", fontcolor="black", label=""];
+n11:e -> c16:p11:w [color="black", fontcolor="black", label=""];
+n11:e -> p0:w [color="black", fontcolor="black", label=""];
+n12:e -> c16:p12:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n13:e -> c16:p13:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n14:e -> c16:p14:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+c16:p5:e -> n2:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n2:e -> p0:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+c15:p3:e -> n3:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+c15:p4:e -> n4:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+p0:e -> n5:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n6:e -> c15:p6:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n7:e -> c15:p7:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n8:e -> c15:p8:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+n9:e -> c15:p9:w [color="black", fontcolor="black", style="setlinewidth(3)", label=""];
+}

@@ -1,0 +1,10 @@
+Partial/Required:  2.86, Required:    400.0, Partial:  1145.33, Net: Module2.RegisterFile\[16\]\[2\], Pin: _1194_/A0, Layer: met1
+Partial/Required:  2.56, Required:    400.0, Partial:  1025.22, Net: net15, Pin: _1112_/A1, Layer: met1
+Partial/Required:  2.15, Required:    400.0, Partial:   861.78, Net: _0444_, Pin: _1015_/A, Layer: met1
+Partial/Required:  1.87, Required:    400.0, Partial:   747.78, Net: net28, Pin: _0645_/B_N, Layer: met1
+Partial/Required:  1.41, Required:  3130.28, Partial:  4412.78, Net: _0461_, Pin: _1045_/A, Layer: met4
+Partial/Required:  1.28, Required:    400.0, Partial:   512.56, Net: Module2.RegisterFile\[17\]\[2\], Pin: _1194_/A1, Layer: met1
+Partial/Required:  1.28, Required:  3091.96, Partial:   3961.4, Net: _0053_, Pin: _1295_/D, Layer: met4
+Partial/Required:  1.27, Required:    400.0, Partial:   506.77, Net: Module2.RegisterFile\[7\]\[0\], Pin: _1133_/A1, Layer: met1
+Partial/Required:  1.16, Required:    400.0, Partial:    464.0, Net: _0198_, Pin: _0755_/A_N, Layer: met1
+Partial/Required:  1.00, Required:    400.0, Partial:   401.81, Net: _0134_, Pin: _1384_/D, Layer: met1
